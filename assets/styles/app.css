@@ -1,0 +1,18 @@
+@import "~bootstrap";
+@import "~datatables.net-bs5";
+
+.fruits-container .row .dataTables_info {
+    padding-top: 0.1em;
+}
+
+span.fav-button {
+    cursor: pointer;
+    font-size: 26px;
+    color: gold;
+    text-shadow: 0 0 0 #bc8d00;
+}
+
+.table tbody td:last-child {
+    padding: 0 2px;
+    text-align: center;
+}

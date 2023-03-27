@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <header class="bg-light py-3">
+        <div class="container">
+            <h1 class="text-center mb-0">🍓 My Fruit List</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-primary text-white py-5">
+            <div class="container text-center">
+                <h2 class="mb-4">Welcome to My Fruit List!</h2>
+                <p class="lead mb-4">
+                    Keep track of your favorite fruits and their nutritional facts.
+                </p>
+                <a href="/fruits" class="btn btn-lg btn-light">Browse Fruits</a>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-heart fa-3x mb-3 text-primary"></i>
+                        <h3 class="mb-3">Favorite Fruits</h3>
+                        <p>Save up to 10 favorite fruits and access them anytime.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-filter fa-3x mb-3 text-primary"></i>
+                        <h3 class="mb-3">Filter &amp; Search</h3>
+                        <p>Find fruits by name or family and explore their nutritional content.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fas fa-chart-pie fa-3x mb-3 text-primary"></i>
+                        <h3 class="mb-3">Nutrition Facts</h3>
+                        <p>Discover the nutritional facts of your favorite fruits and compare them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

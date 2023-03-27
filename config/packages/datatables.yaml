@@ -1,0 +1,8 @@
+# Latest documentation available at https://omines.github.io/datatables-bundle/#configuration
+datatables:
+    # Set options, as documented at https://datatables.net/reference/option/
+    options:
+        lengthMenu : [10, 25, 50, 100]
+        pageLength: 10
+        searching: true
+        dom: "<'row' <'col-sm-12' f>><'row' <'col-sm-12' tr>><'row' <'col-sm-2'l><'col-sm-4'i><'col-sm-6 text-right'p>>"

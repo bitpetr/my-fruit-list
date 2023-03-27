@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>{% block title %}My fruit list{% endblock %}</title>
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>🍓</text></svg>">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">
+                        <i>🍓</i>
+                        My Fruit List
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link {{ app.request.attributes.get('_route') == 'app_home' ? 'active" aria-current="page' : '' }}"
+                                   href="{{ path('app_home') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ app.request.attributes.get('_route') == 'app_fruits' ? 'active" aria-current="page' : '' }}"
+                                   href="{{ path('app_fruits') }}">Fruits</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ app.request.attributes.get('_route') == 'app_favorites' ? 'active" aria-current="page' : '' }}"
+                                   href="{{ path('app_favorites') }}">Favorites</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ app.request.attributes.get('_route') == 'app_about' ? 'active" aria-current="page' : '' }}"
+                                   href="{{ path('app_about') }}">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {% block body %}{% endblock %}
+    <footer class="bg-light py-3 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0">© 2023 My Fruit List. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

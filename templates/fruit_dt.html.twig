@@ -1,0 +1,25 @@
+<table id="{{ datatable.name }}"
+       class="{% if className is defined and className is not empty %}{{ className }}{% else %}table table-striped table-bordered table-hover data-table{% endif %}">
+    <thead>
+    <tr>
+        {% for column in datatable.columns %}
+            <th>{{ column.label|trans }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    {% if datatable.name == 'fruits-fav' %}
+        <tfoot>
+        <tr>
+            <th colspan="5">Total</th>
+            <th id="totalCarbohydrates"></th>
+            <th id="totalProtein"></th>
+            <th id="totalFat"></th>
+            <th id="totalCalories"></th>
+            <th id="totalSugar"></th>
+            <th></th>
+        </tr>
+        </tfoot>
+    {% endif %}
+</table>

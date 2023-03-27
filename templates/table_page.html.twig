@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div class="row py-2">
+        <div class="col">
+            <div class="fruits-container" data-controller="fruits-table"
+                 data-action="fav-button:favorite->fruits-table#update"
+                 data-config={{ datatable_settings(datatable) }}>
+                Loading..
+            </div>
+        </div>
+    </div>
+{% endblock %}

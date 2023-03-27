@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <main class="py-5">
+        <div class="container">
+            <h2 class="mb-4">About My Fruit List</h2>
+            <p class="lead">
+                My Fruit List is a web app designed for fruit enthusiasts who are passionate about tracking their favorite fruits and staying informed about their nutritional content. It provides a simple yet powerful interface to search, filter, and compare various fruits and their nutritional facts.
+            </p>
+            <h3 class="mb-3">Our Mission</h3>
+            <p>
+                Our mission is to make it easier for users to keep track of their favorite fruits and their nutritional content, ultimately promoting healthier eating habits. By providing an easy-to-use platform, we aim to inspire and educate people about the importance of incorporating fruits into their daily diet.
+            </p>
+            <h3 class="mb-3">Features</h3>
+            <ul>
+                <li>
+                    <strong>Favorite Fruits:</strong> Save up to 10 favorite fruits and access them anytime.
+                </li>
+                <li>
+                    <strong>Filter &amp; Search:</strong> Find fruits by name or family and explore their nutritional content.
+                </li>
+                <li>
+                    <strong>Nutrition Facts:</strong> Discover the nutritional facts of your favorite fruits and compare them to make informed decisions about your diet.
+                </li>
+            </ul>
+            <h3 class="mb-3">Get Started</h3>
+            <p>
+                To start exploring the features of My Fruit List, visit the <a href="/fruits">Fruits</a> page and browse our fruit database. You can also view your favorite fruits by visiting your <a href="/favorites">Favorites</a> page.
+            </p>
+            <h3 class="mb-3">Technical Details</h3>
+            <p>
+                My Fruit List is built using modern web technologies, ensuring a seamless and responsive user experience across various devices. The front-end is powered by Bootstrap CSS framework, providing a visually appealing and user-friendly interface. The back-end is developed using Symfony, a high-performance PHP framework. Data storage and retrieval is managed using Doctrine ORM, which simplifies database operations and ensures efficient data management. The app also uses Stimulus.js for front-end interactivity and DataTables for displaying and manipulating fruit data in an interactive table format.
+            </p>
+            <p class="mt-4">
+                <em>Data source: <a href="https://www.fruityvice.com/" target="_blank" rel="noopener noreferrer">Fruityvice</a></em>
+            </p>
+        </div>
+    </main>
+{% endblock %}
+
+{% block title %}
+    {{ parent() }} - About
+{% endblock %}
+
