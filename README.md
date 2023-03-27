@@ -23,6 +23,7 @@ One of the following sets:
 
 Quick start with Docker
 -----------------------
+[![GitHub Actions](https://github.com/bitpetr/my-fruit-list/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/bitpetr/my-fruit-list/actions/workflows/docker-publish.yml)
 
 1. Pull and run the image:
     + `docker run -d -p 8080:8080 --name my-fruit-list-app ghcr.io/bitpetr/my-fruit-list:master`
