@@ -18,7 +18,7 @@
         "webpack-notifier": "^1.15.0",
         "yarn": "^1.22.19"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "private": true,
     "scripts": {
         "dev-server": "encore dev-server",

@@ -1,21 +1,82 @@
-Fruits Test Task - Symfony Developer Assignment
+My Fruit List
+=============
 
-**Task Objective:** Develop a Symfony-based application to fetch, store, and display fruit information from [https://fruityvice.com/](https://fruityvice.com/), with additional features as specified.
+My Fruit List is a web app designed for fruit enthusiasts who are passionate about tracking their favorite fruits and
+staying informed about their nutritional content. It provides a simple yet powerful interface to search, filter, and
+compare various fruits and their nutritional facts.
 
-**Task Requirements:**
+Features
+--------
 
-1.  **Console Command:** Implement a console command to fetch all fruit data from [https://fruityvice.com/](https://fruityvice.com/) and store it into the database.
+- Favorite Fruits: Save up to 10 favorite fruits and access them anytime.
+- Filter & Search: Find fruits by name or family and explore their nutritional content.
+- Nutrition Facts: Discover the nutritional facts of your favorite fruits and compare them to make informed decisions
+  about your diet.
 
-2.  **Email Notification:** Configure the application to send an email to a dummy admin email (e.g., [test@gmail.com](mailto:test@gmail.com) or your Gmail address) whenever new fruit(s) are added to the database.
+Requirements
+------------
 
-3.  **Fruits Listing Page:** Develop a paginated page displaying all fruits. Include a form to filter fruits by name and family. Allow users to add up to 10 fruits to their favorites.
+One of the following sets:
 
-4.  **Favorite Fruits Page:** Create a dedicated page to display the user's favorite fruits along with the sum of their nutrition facts.
+- Docker
+- PHP 8.1, Composer, Node.js 18+, Yarn
 
-5.  **Documentation:** Provide a README file containing detailed instructions for application installation and startup.
+Quick start with Docker
+-----------------------
 
-6.  **Coding Standards:** Follow PSR-12 for PHP code and JavaScript Standard Style for JS code.
+1. Pull and run the image:
+    + `docker run -d -p 8080:8080 --name my-fruit-list-app ghcr.io/bitpetr/my-fruit-list:master`
+2. Update the fruit database:
+    + `docker exec my-fruit-list-app php bin/console app:fruit:update`
+3. Open http://localhost:8080/ in your browser and enjoy!
 
-7.  **Testing:** Unit tests are encouraged.
+To remove:
 
-8.  **Framework:** Utilize the Symfony PHP framework for this project.
++ `docker stop my-fruit-list-app`
++ `docker rm -v my-fruit-list-app`
+
+Manual Setup
+------------
+
+### Setup
+1. Clone the repository:
+    + `git clone https://github.com/bitpetr/my-fruit-list.git`
+    + `cd my-fruit-list`
+
+2. Install PHP dependencies:
+    + `composer install`
+
+3. Configure your `.env.local` file with the appropriate settings for your environment.
+
+4. Create the database and schema:
+    + `bin/console doctrine:database:create`
+    + `bin/console doctrine:schema:create`
+
+5. Install JavaScript dependencies:
+    + `yarn install`
+
+6. Build the front-end assets:
+    + `yarn build`
+
+### Running the App
+1. Start the Symfony development server:
+    + `php -S 0.0.0.0:8080 -t public`
+
+2. Open your web browser and navigate to `http://localhost:8080` to start using My Fruit List.
+
+### [optional] Running the tests
+1. Create the test database and schema:
+   + `bin/console doctrine:database:create -e test`
+   + `bin/console doctrine:schema:create -e test`
+2. Run PHPUnit:
+   + `bin/phpunit`
+
+Data Source
+-----------
+
+The data used in this application is provided by [Fruityvice](https://www.fruityvice.com/).
+
+License
+-------
+
+This project is open-source and available under the [MIT License](https://chat.openai.com/chat/LICENSE).
