@@ -60,10 +60,11 @@ Manual Setup
     + `yarn build`
 
 ### Running the App
-1. Start the Symfony development server:
+1. Update the fruit database:
+   + `bin/console app:fruit:update`
+2. Run the dev server:
     + `php -S 0.0.0.0:8080 -t public`
-
-2. Open your web browser and navigate to `http://localhost:8080` to start using My Fruit List.
+3. Open your web browser and navigate to http://localhost:8080 to start using My Fruit List.
 
 ### [optional] Running the tests
 1. Create the test database and schema:
