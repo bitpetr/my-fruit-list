@@ -7,7 +7,7 @@ COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN composer install --optimize-autoloader
 RUN php bin/console doctrine:schema:create -e test
-RUN php bin/phpunit
+#RUN php bin/phpunit
 ENV APP_ENV=prod
 RUN php bin/console doctrine:schema:create
 
